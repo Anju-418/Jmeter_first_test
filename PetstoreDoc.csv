@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1750329419114,801,Launch URL,200,,Thread Group 1-1,text,true,,1452,126,2,2,https://petstore.octoperf.com/,801,0,631
+1750329419917,167,Enter the store,200,,Thread Group 1-1,text,true,,5664,148,2,2,https://petstore.octoperf.com/actions/Catalog.action,166,0,0
+1750329419527,685,Launch URL,200,,Thread Group 1-2,text,true,,1452,126,2,2,https://petstore.octoperf.com/,685,0,520
+1750329420212,167,Enter the store,200,,Thread Group 1-2,text,true,,5664,148,2,2,https://petstore.octoperf.com/actions/Catalog.action,167,0,0
+1750329420084,337,Login,200,,Thread Group 1-1,text,true,,6151,465,2,2,https://petstore.octoperf.com/actions/Catalog.action;jsessionid=C32FF66221508817B7768302F48A463B,167,0,0
+1750329420084,167,Login-0,302,,Thread Group 1-1,,true,,349,273,2,2,https://petstore.octoperf.com/actions/Account.action,167,0,0
+1750329420254,167,Login-1,200,,Thread Group 1-1,text,true,,5802,192,2,2,https://petstore.octoperf.com/actions/Catalog.action;jsessionid=C32FF66221508817B7768302F48A463B,167,0,0
+1750329420380,333,Login,200,,Thread Group 1-2,text,true,,6153,465,1,1,https://petstore.octoperf.com/actions/Catalog.action;jsessionid=36F225B50DEC61A878A49D95CF18A13E,166,0,0
+1750329420380,166,Login-0,302,,Thread Group 1-2,,true,,349,273,1,1,https://petstore.octoperf.com/actions/Account.action,166,0,0
+1750329420546,167,Login-1,200,,Thread Group 1-2,text,true,,5804,192,1,1,https://petstore.octoperf.com/actions/Catalog.action;jsessionid=36F225B50DEC61A878A49D95CF18A13E,166,0,0
