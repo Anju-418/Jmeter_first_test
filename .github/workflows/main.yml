@@ -32,7 +32,7 @@ jobs:
       - name: Run JMeter Test
         run: |
           mkdir -p jmeter/report  # <== Add this line
-          apache-jmeter-5.6.3/bin/jmeter -n -t test-plan.jmx -l result.jtl -e -o jmeter/report
+          apache-jmeter-5.6.3/bin/jmeter -n -t PetStore_Test Plan.jmx -l result.jtl -e -o jmeter/report
 
       - name: Upload JMeter Report
         uses: actions/upload-artifact@v4
