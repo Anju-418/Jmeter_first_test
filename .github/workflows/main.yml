@@ -32,7 +32,7 @@ jobs:
       - name: Run JMeter Test
         run: |
           mkdir -p jmeter/report  # <== Add this line
-          apache-jmeter-5.6.3/bin/jmeter -n -t "PetStoreNew.jmx" -l result.jtl -e -o jmeter/report
+          apache-jmeter-5.6.3/bin/jmeter -n -t "Test001.jmx" -l result.jtl -e -o jmeter/report
 
       - name: Debug - List JMeter report files
         run: ls -R jmeter
