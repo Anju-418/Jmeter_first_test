@@ -47,17 +47,16 @@ jobs:
       - name: Zip JMeter Report
         run: zip -r jmeter-report.zip jmeter/report
 
-      - name: Send JMeter Report via Email
+      - name: Send JMeter Report via Gmail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.office365.com
+          server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.OUTLOOK_USERNAME }}
-          password: ${{ secrets.OUTLOOK_PASSWORD }}
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_PASSWORD }}
           subject: "JMeter Test Report"
-          body: "Hello, the latest JMeter test report is attached."
-          to: anjusekharan3795@gmail.com  # or your personal email
-          from: ${{ secrets.OUTLOOK_USERNAME }}
+          body: "Hello,\n\nPlease find the attached JMeter test report.\n\nThanks!"
+          to: anjusekharan3795@gmail.com
+          from: ${{ secrets.GMAIL_USERNAME }}
           attachments: jmeter-report.zip
-
 
