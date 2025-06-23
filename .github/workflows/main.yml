@@ -43,19 +43,22 @@ jobs:
          name: jmeter-report
          path: jmeter/report
 
-      - name: Zip JMeter Report
+      - name: Zip and Rename JMeter Report
         run: zip -r jmeter-report.txt jmeter/report
 
       - name: Send JMeter Report via Gmail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.GMAIL_USERNAME }}
-          password: ${{ secrets.GMAIL_PASSWORD }}
-          subject: "JMeter Test Report"
-          body: "Hello,\n\nPlease find the attached JMeter test report.\n\nThanks!"
-          to: anjusekharan3795@gmail.com
-          from: ${{ secrets.GMAIL_USERNAME }}
-          attachments: jmeter-report.txt
+         server_address: smtp.gmail.com
+         server_port: 587
+         username: ${{ secrets.GMAIL_USERNAME }}
+         password: ${{ secrets.GMAIL_PASSWORD }}
+         subject: "JMeter Test Report"
+         body: "Hi,\n\nPlease find the JMeter test report attached.\n\n(Rename the .txt file back to .zip after downloading)"
+         to: your-work-email@company.com
+         from: ${{ secrets.GMAIL_USERNAME }}
+         attachments: jmeter-report.txt
+
+
+     
 
