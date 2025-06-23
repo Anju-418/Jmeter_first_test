@@ -43,7 +43,6 @@ jobs:
          name: jmeter-report
          path: jmeter/report
 
-      
       - name: Zip JMeter Report
         run: zip -r jmeter-report.zip jmeter/report
 
