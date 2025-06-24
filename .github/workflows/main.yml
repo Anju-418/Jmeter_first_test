@@ -44,7 +44,7 @@ jobs:
          path: jmeter/report
 
       - name: Zip and Rename JMeter Report
-        run: zip -r jmeter-report.txt jmeter/report
+        run: zip -r jmeter-report.xlsx jmeter/report
 
       - name: Send JMeter Report via Gmail
         uses: dawidd6/action-send-mail@v3
@@ -57,7 +57,7 @@ jobs:
          body: "Hi,\n\nPlease find the JMeter test report attached.\n\n(Rename the .txt file back to .zip after downloading)"
          to: your-work-email@company.com
          from: ${{ secrets.GMAIL_USERNAME }}
-         attachments: jmeter-report.txt
+         attachments: jmeter-report.xlsx
 
 
      
